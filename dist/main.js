@@ -1,0 +1,25 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Address_1 = __importDefault(require("./entities/customer/Address"));
+const Customer_1 = __importDefault(require("./entities/customer/Customer"));
+const Order_1 = __importDefault(require("./entities/order/Order"));
+const OrderItem_1 = __importDefault(require("./entities/order/OrderItem"));
+const Product_1 = __importDefault(require("./entities/product/Product"));
+let customer = new Customer_1.default('John Doe', 'john@email.com', '123-456');
+const address = new Address_1.default('Main St', 123, '123-45', 'New York');
+customer.Address = address;
+customer.activate();
+const product = new Product_1.default('Product 1', 100);
+const product2 = new Product_1.default('Product 2', 200);
+const item1 = new OrderItem_1.default(product._id, product._name, 5, product._price);
+const item2 = new OrderItem_1.default(product2._id, product2._name, 10, product2._price);
+const order = new Order_1.default(customer._id, [item1, item2]);
+console.log(customer);
+console.log('==================================');
+console.log(product);
+console.log(product2);
+console.log('==================================');
+console.log(order);

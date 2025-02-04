@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@swc/cli": "^0.1.55",
+    "@swc/core": "^1.2.148",
+    "@swc/jest": "^0.2.20",
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "ts-node": "^10.9.2",
+    "tslint": "^5.20.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "uuid": "^11.0.5"
+  },
+  "scripts": {
+    "dev": "ts-node src/main.ts",
+    "test": "npm run tsc --noEmit && jest",
+    "tsc": "tsc"
+  }
+}
