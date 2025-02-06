@@ -1,5 +1,6 @@
-import Address from "../../entities/customer/Address";
-import Customer from "../../entities/customer/Customer";
+import Address from "../../../domain/entities/customer/Address";
+import Customer from "../../../domain/entities/customer/Customer";
+
 
 describe('Customer', () => {
     it('should create a new customer', () => {

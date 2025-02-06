@@ -1,8 +1,9 @@
-import Address from "../../entities/customer/Address";
-import Customer from "../../entities/customer/Customer";
-import Order from "../../entities/order/Order";
-import OrderItem from "../../entities/order/OrderItem";
-import OrderService from "../../services/order.service";
+import Address from "../../../domain/entities/customer/Address";
+import Customer from "../../../domain/entities/customer/Customer";
+import Order from "../../../domain/entities/order/Order";
+import OrderItem from "../../../domain/entities/order/OrderItem";
+import OrderService from "../../../domain/services/order.service";
+
 
 describe('OrderService', () => {
    

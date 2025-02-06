@@ -3,11 +3,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Address_1 = __importDefault(require("./entities/customer/Address"));
-const Customer_1 = __importDefault(require("./entities/customer/Customer"));
-const Order_1 = __importDefault(require("./entities/order/Order"));
-const OrderItem_1 = __importDefault(require("./entities/order/OrderItem"));
-const Product_1 = __importDefault(require("./entities/product/Product"));
+const Address_1 = __importDefault(require("./domain/entities/customer/Address"));
+const Customer_1 = __importDefault(require("./domain/entities/customer/Customer"));
+const Order_1 = __importDefault(require("./domain/entities/order/Order"));
+const OrderItem_1 = __importDefault(require("./domain/entities/order/OrderItem"));
+const Product_1 = __importDefault(require("./domain/entities/product/Product"));
 let customer = new Customer_1.default('John Doe', 'john@email.com', '123-456');
 const address = new Address_1.default('Main St', 123, '123-45', 'New York');
 customer.Address = address;

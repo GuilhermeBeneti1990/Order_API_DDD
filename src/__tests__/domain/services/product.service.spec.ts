@@ -1,5 +1,6 @@
-import Product from "../../entities/product/Product";
-import ProductService from "../../services/product.service";
+import Product from "../../../domain/entities/product/Product";
+import ProductService from "../../../domain/services/product.service";
+
 
 describe('ProductService', () => {
     it('should increase the price of all products by the given percentage', () => {

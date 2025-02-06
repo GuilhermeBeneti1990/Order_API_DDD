@@ -1,4 +1,5 @@
-import Product from "../../entities/product/Product";
+import Product from "../../../domain/entities/product/Product";
+
 
 describe('Product', () => {
     it('should throw an error when creating a product without a name', () => {

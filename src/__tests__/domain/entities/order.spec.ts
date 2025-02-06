@@ -1,5 +1,6 @@
-import Order from "../../entities/order/Order";
-import OrderItem from "../../entities/order/OrderItem";
+import Order from "../../../domain/entities/order/Order";
+import OrderItem from "../../../domain/entities/order/OrderItem";
+
 
 describe('Order', () => {
     it('should throw an error when creating an order without a customer id', () => {

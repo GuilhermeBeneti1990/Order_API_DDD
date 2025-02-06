@@ -1,4 +1,5 @@
-import OrderItem from "../../entities/order/OrderItem";
+import OrderItem from "../../../domain/entities/order/OrderItem";
+
 
 describe('OrderItem', () => {
     it('should throw an error when creating an order item without a name', () => {
