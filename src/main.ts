@@ -1,8 +1,8 @@
-import Address from "./domain/entities/customer/Address";
-import Customer from "./domain/entities/customer/Customer";
-import Order from "./domain/entities/order/Order";
-import OrderItem from "./domain/entities/order/OrderItem";
-import Product from "./domain/entities/product/Product";
+import Order from "./domain/checkout/entities/order/Order";
+import OrderItem from "./domain/checkout/entities/order/OrderItem";
+import Customer from "./domain/customer/entities/Customer";
+import Address from "./domain/customer/entities/VOs/Address";
+import Product from "./domain/product/entities/Product";
 
 let customer = new Customer('John Doe', 'john@email.com', '123-456');
 const address = new Address('Main St', 123, '123-45', 'New York');
