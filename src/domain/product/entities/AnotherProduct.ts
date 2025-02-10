@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import IProduct from './product.interface';
 
-export default class Product implements IProduct {
+export default class AnotherProduct implements IProduct {
 
     _id: string;
     _name: string;
