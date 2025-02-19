@@ -13,8 +13,8 @@ export default class CustomerRepository implements ICustomerRepository {
       phone: entity._phone,
       street: entity._address._street,
       number: entity._address._number,
-      zipcode: entity._address._zipCode,
       city: entity._address._city,
+      zipcode: entity._address._zipCode,
       active: entity._active,
       rewardPoints: entity._rewardPoints,
     });
