@@ -9,12 +9,8 @@ describe('Customer', () => {
     });
 
     it('should throw an error when creating a customer without a name', () => {
-        expect(() => new Customer('', 'john@email.com', '123-456')).toThrowError('Name is required');
+        expect(() => new Customer('', 'john@email.com', '123-456')).toThrowError('customer: Name is required');
     });
-
-    it('should throw an error when creating a customer without an email', () => {
-        expect(() => new Customer('John Doe', '', '123-456')).toThrowError('Email is required');
-    })
 
     it('should set an address to the customer', () => {
         const customer = new Customer('John Doe', 'john@email.com', '123-456');

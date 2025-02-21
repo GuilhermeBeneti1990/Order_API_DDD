@@ -1,9 +1,10 @@
+import Entity from "../../@shared/entities/entity.abstract";
+import NotificationError from "../../@shared/notifications/notification.error";
 import Address from "./VOs/Address";
 import { v4 as uuidv4 } from 'uuid';
 
-export default class Customer {
+export default class Customer extends Entity {
 
-    _id: string;
     _name: string;
     _email: string;
     _phone: string;
@@ -12,11 +13,16 @@ export default class Customer {
     _rewardPoints: number = 0;
 
     constructor(name: string, email: string, phone: string) {
+        super();
         this._id = uuidv4();
         this._name = name;
         this._email = email;
         this._phone = phone;
         this.validate();
+
+        if(this.notification.hasErrors()) {
+            throw new NotificationError(this.notification.getErrors());
+        }
     }
 
     set Address(address: Address) {
@@ -25,10 +31,16 @@ export default class Customer {
 
     validate() {
         if (!this._name) {
-            throw new Error('Name is required');
+            this.notification.addError({
+                context: "customer",
+                message: "Name is required"
+            });
         }
         if (!this._email) {
-            throw new Error('Email is required');
+            this.notification.addError({
+                context: "customer",
+                message: "Name is required"
+            });
         }
     }
 
